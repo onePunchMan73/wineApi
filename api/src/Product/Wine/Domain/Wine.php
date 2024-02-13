@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Product\Domain;
+namespace App\Product\Wine\Domain;
 
 use DateTimeInterface;
 

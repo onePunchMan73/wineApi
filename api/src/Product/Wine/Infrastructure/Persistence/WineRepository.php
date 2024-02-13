@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Product\Infrastructure\Persistence;
+namespace App\Product\Wine\Infrastructure\Persistence;
 
-use App\Product\Domain\Wine;
-use App\Product\Domain\WineRepositoryInterface;
+use App\Product\Wine\Domain\Wine;
+use App\Product\Wine\Domain\WineRepositoryInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
 

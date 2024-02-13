@@ -1,2 +1,2 @@
 resources:
-    
+    App\Product\Wine\Domain\Wine: ~  

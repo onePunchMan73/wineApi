@@ -1,2 +1,3 @@
 resources:
-    App\Product\Wine\Domain\Wine: ~  
+    App\Product\Wine\Infrastructure\Entity\Wine: ~ 
+    App\Product\Wine\Infrastructure\Entity\WineOption: ~

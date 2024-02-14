@@ -2,75 +2,16 @@
 
 namespace App\Product\Wine\Domain;
 
-use DateTimeInterface;
+use App\Product\Wine\Domain\Trait\WineOptionTrait;
+use Doctrine\Common\Collections\ArrayCollection;
 
-class Wine
+abstract class Wine implements WineInterface
 {
-    private int $id;
-    private string $name;
-    private string $description;
-    private DateTimeInterface $createdAt;
-    private DateTimeInterface $updatedAt;
-    private bool $isActive;
+    use WineOptionTrait;
 
-    public function getId(): int
+    public function __construct()
     {
-        return $this->id;
-    }
-
-    public function setId(int $id): void
-    {
-        $this->id = $id;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-
-    public function getDescription(): string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(string $description): void
-    {
-        $this->description = $description;
-    }
-
-    public function getCreatedAt(): DateTimeInterface
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(DateTimeInterface $createdAt): void
-    {
-        $this->createdAt = $createdAt;
-    }
-
-    public function getUpdatedAt(): DateTimeInterface
-    {
-        return $this->updatedAt;
-    }
-
-    public function setUpdatedAt(DateTimeInterface $updatedAt): void
-    {
-        $this->updatedAt = $updatedAt;
-    }
-
-    public function isActive(): bool
-    {
-        return $this->isActive;
-    }
-
-    public function setIsActive(bool $isActive): void
-    {
-        $this->isActive = $isActive;
+        $this->wineOptions = new ArrayCollection();
     }
 
 }

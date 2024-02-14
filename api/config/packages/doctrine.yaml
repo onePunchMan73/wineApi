@@ -16,11 +16,17 @@ doctrine:
         auto_mapping: true
         mappings:
             wine_mapping:
-                type: xml
+                type: attribute
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/Product/Wine/Infrastructure/doctrine/'
-                prefix: 'App\Product\Wine\Domain'
+                dir: '%kernel.project_dir%/src/Product/Wine/Infrastructure/Entity/'
+                prefix: App\Product\Wine\Infrastructure\Entity\
                 alias: Wine
+            wine_option_mapping:
+                type: attribute
+                is_bundle: false
+                dir: '%kernel.project_dir%/src/Product/Wine/Infrastructure/Entity/'
+                prefix: App\Product\Wine\Infrastructure\Entity\
+                alias: WineOption
 
 when@test:
     doctrine:

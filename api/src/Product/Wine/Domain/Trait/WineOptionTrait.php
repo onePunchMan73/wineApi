@@ -20,10 +20,8 @@ trait WineOptionTrait
 
     public function removeWineOption(WineOption $wineOption): self
     {
-        if ($this->wineOptions->removeElement($wineOption)) {
-            if ($wineOption->getWine() === $this) {
-                $wineOption->setWine(null);
-            }
+        if ($this->wineOptions->contains($wineOption)) {
+            $this->wineOptions->removeElement($wineOption);
         }
 
         return $this;

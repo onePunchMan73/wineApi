@@ -2,18 +2,17 @@
 
 namespace App\Product\Wine\Domain;
 
-use App\Product\Wine\Domain\Trait\WineAppellationTraitInterface;
-use App\Product\Wine\Domain\Trait\WineOptionTraitInterface;
+use App\Product\Wine\Infrastructure\Entity\WineClassificationEntity;
 use DateTimeInterface;
 
-interface WineInterface extends WineOptionTraitInterface, WineAppellationTraitInterface
+interface WineAppellationInterface
 {
     public function getId(): int;
     public function setId(int $id): void;
+    public function getClassification(): WineClassificationEntity;
+    public function setClassification(WineClassificationEntity $classification): void;
     public function getName(): string;
     public function setName(string $name): void;
-    public function getDescription(): string;
-    public function setDescription(string $description): void;
     public function getCreatedAt(): DateTimeInterface;
     public function setCreatedAt(DateTimeInterface $createdAt): void;
     public function getUpdatedAt(): DateTimeInterface;

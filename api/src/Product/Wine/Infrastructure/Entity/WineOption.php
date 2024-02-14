@@ -40,12 +40,12 @@ class WineOption implements WineOptionInterface
         $this->id = $id;
     }
 
-    public function getWine(): ?WineEntity
+    public function getWine(): WineEntity
     {
         return $this->wine;
     }
 
-    public function setWine(?WineEntity $wine): self
+    public function setWine(WineEntity $wine): self
     {
         $this->wine = $wine;
         return $this;

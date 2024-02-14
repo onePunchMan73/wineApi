@@ -3,6 +3,7 @@
 namespace App\Product\Wine\Infrastructure\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
+use App\Product\Wine\Domain\Wine;
 use App\Product\Wine\Domain\WineOptionInterface;
 use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
@@ -18,7 +19,7 @@ class WineOption implements WineOptionInterface
     private int $id;
     #[ORM\ManyToOne(targetEntity: WineEntity::class, inversedBy: 'wineOptions')]
     #[ORM\JoinColumn(nullable: false)]
-    private WineEntity $wine;
+    private Wine $wine;
     #[ORM\Column(type: 'text')]
     private string $description;
     #[ORM\Column(type: 'float', nullable: true)]
@@ -40,12 +41,12 @@ class WineOption implements WineOptionInterface
         $this->id = $id;
     }
 
-    public function getWine(): WineEntity
+    public function getWine(): Wine
     {
         return $this->wine;
     }
 
-    public function setWine(WineEntity $wine): self
+    public function setWine(Wine $wine): self
     {
         $this->wine = $wine;
         return $this;

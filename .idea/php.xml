@@ -119,9 +119,20 @@
       <path value="$PROJECT_DIR$/api/vendor/sweetrdf/rdf-helpers" />
       <path value="$PROJECT_DIR$/api/vendor/masterminds/html5" />
       <path value="$PROJECT_DIR$/api/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/api/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/api/vendor/phpstan/phpstan-deprecation-rules" />
+      <path value="$PROJECT_DIR$/api/vendor/phpstan/phpstan-strict-rules" />
+      <path value="$PROJECT_DIR$/api/vendor/phpstan/phpstan-symfony" />
+      <path value="$PROJECT_DIR$/api/vendor/phpstan/phpstan-phpunit" />
+      <path value="$PROJECT_DIR$/api/vendor/rector/rector" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
+  <component name="PhpStan">
+    <PhpStan_settings>
+      <PhpStanConfiguration tool_path="$PROJECT_DIR$/api/vendor/bin/phpstan" />
+    </PhpStan_settings>
+  </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
